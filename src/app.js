@@ -1,4 +1,4 @@
-const suma = require('./suma');  // Importamos solo si la usas en el DOM
+const suma = require('./suma'); // Importamos solo si la usas en el DOM
 
 console.log('App lista');
 
