@@ -1,25 +1,22 @@
-function suma(a, b) {
-  return a + b;
-}
+const suma = require('./suma');  // Importamos solo si la usas en el DOM
 
-console.log("App lista");
+console.log('App lista');
 
+// --- Función para agregar un item al DOM ---
 function agregarItem(texto) {
-  const lista = document.getElementById("lista");
-  const li = document.createElement("li");
+  const lista = document.getElementById('lista');
+  const li = document.createElement('li');
   li.textContent = texto;
   lista.appendChild(li);
 }
 
-document.getElementById("btn-agregar").addEventListener("click", () => {
-  const input = document.getElementById("texto");
+// --- Evento del botón ---
+document.getElementById('btn-agregar').addEventListener('click', () => {
+  const input = document.getElementById('texto');
   const valor = input.value.trim();
 
-  if (valor !== "") {
+  if (valor !== '') {
     agregarItem(valor);
-    input.value = "";
+    input.value = '';
   }
 });
-
-
-module.exports = suma;
